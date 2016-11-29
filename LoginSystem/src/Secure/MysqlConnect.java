@@ -15,14 +15,18 @@ public class MysqlConnect {
     Connection conn =null;
     public static Connection ConnectDB(){
         try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost/technosoft","root","05121989");
-           JOptionPane.showMessageDialog(null,"connected to database");
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Connection conn=DriverManager.getConnection("jdbc:mysql://www.db4free.net:3306/logindatabase","sabhisohal","9023242590");
+          // JOptionPane.showMessageDialog(null,"connected to database");
            return conn;
     }
+        
 catch(Exception e){
     JOptionPane.showMessageDialog(null,e);
     return null;
+    //jdbc:jtds:sqlserver:
+    //jdbc:mysql:
+    //jdbc:sqlserver:
 }
 }
 }
