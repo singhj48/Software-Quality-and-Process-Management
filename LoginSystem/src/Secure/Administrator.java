@@ -158,18 +158,10 @@ public class Administrator extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       
         
-        try{
-             conn = MysqlConnect.ConnectDB();
-        //String Sql="select * from triger where username=? and password=?";
-        String Sql="insert into items values ('"+jTextField1+"','"+jTextField2+"','"+jTextField3+"','"+jTextField4+"')";
-         pst=conn.prepareStatement(Sql);
-          rs=pst.executeQuery();
-        }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(null,e);
-        }
-        //WORKING ON IT
+
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
