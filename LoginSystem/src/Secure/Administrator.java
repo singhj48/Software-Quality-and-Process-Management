@@ -331,8 +331,9 @@ public class Administrator extends javax.swing.JFrame {
         jTextField1.setText(model.getValueAt(i,0).toString());
         jTextField2.setText(model.getValueAt(i,1).toString());
         jTextField3.setText(model.getValueAt(i,2).toString());
-        jComboBox1.setSelectedItem(model.getValueAt(i, 3));
-        jComboBox2.setSelectedItem(model.getValueAt(i, 4));
+        jComboBox1.setSelectedItem(model.getValueAt(i, 3).toString());
+        jComboBox2.setSelectedItem(model.getValueAt(i, 4).toString());
+        
         
     }//GEN-LAST:event_jTable1MouseClicked
 
