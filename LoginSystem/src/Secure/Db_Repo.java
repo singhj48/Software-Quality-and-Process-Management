@@ -126,6 +126,29 @@ public class Db_Repo {
             System.err.println(e);
         }
     }
+    public String CheckStatus(String ModCode, int Sid){
+        
+        try{
+        String query = "SELECT STATUS FROM DANNY.COMCOVERSHEETS WHERE MODULE_CODE = ? AND STUD_ID = ?";
+        PreparedStatement pt = con.prepareStatement(query);
+        pt.setString(1, ModCode);
+        pt.setInt(2, Sid);
+
+        ResultSet rs  = pt.executeQuery();
+        if (rs.next()) {
+            String s;
+            s = rs.getString("STATUS");
+            return s;
+            //s[1] = rs.getString("MODULE_TITLE");
+            
+            }
+        }
+        catch(SQLException e){
+            System.err.println(e); 
+            return null;
+        }
+        return null;
+    }
         
 }
     
