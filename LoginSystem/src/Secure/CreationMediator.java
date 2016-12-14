@@ -6,7 +6,7 @@
 
 //@@@@@@@@@@ This is where all the events will but sent out to all the processors that are need to complete the event@@@@@@@@@// 
 
-package ecs.system;
+package Secure;
 import javax.swing.JOptionPane;
 //import java.sql.*;
 
@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 public class CreationMediator {
     //Instantiate the coversheetCreation_processor and Db_repo.
     CoverSheetCreation_processor CovsheCre = new CoverSheetCreation_processor();
-    Db_Repo DbPro = new Db_Repo();
+   
     
     public void CreateCoverSheet(String code, String Title){
         //Call a method from within the CoverSheetCreation_processor to create a coversheet.

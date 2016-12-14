@@ -3,6 +3,7 @@ package Secure;
 
 
 import java.awt.Color;
+import java.awt.event.ActionListener;
 import java.sql.*;
 import javax.swing.*;
 public class Login extends javax.swing.JFrame {
@@ -161,10 +162,12 @@ String type;
                            // jLabel3.setForeground(Color.BLACK);
                             JOptionPane.showMessageDialog(null," staff login");
                             
+                           
+                            
+                            
                             this.setVisible(false);
-                            main w = new main();
-                            w.jLabel1.setText("STAFF");
-                            w.setVisible(true);
+                            new ECS_GUI().setVisible(true); // Main Form to show after the Login Form..
+
                         }
                         
                        //jLabel3.setText("WelCome to the system");
@@ -180,9 +183,7 @@ String type;
                           //  jLabel3.setForeground(Color.BLACK);
                             JOptionPane.showMessageDialog(null," Student login");
                             this.setVisible(false);
-                            main w=new main();
-                            w.jLabel1.setText("STUDENT");
-                            w.setVisible(true);
+                            new StudentLogin().setVisible(true);
                             
                        // JOptionPane.showMessageDialog(null,"invalid username","Access Denied",JOptionPane.ERROR_MESSAGE);
                     }
