@@ -183,7 +183,7 @@ String type;
                           //  jLabel3.setForeground(Color.BLACK);
                             JOptionPane.showMessageDialog(null," Student login");
                             this.setVisible(false);
-                            new StudentLogin().setVisible(true);
+                           // new StudentLogin().setVisible(true);
                             
                        // JOptionPane.showMessageDialog(null,"invalid username","Access Denied",JOptionPane.ERROR_MESSAGE);
                     }
