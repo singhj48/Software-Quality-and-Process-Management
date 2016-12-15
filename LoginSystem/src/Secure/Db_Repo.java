@@ -129,17 +129,20 @@ public class Db_Repo {
     public String CheckStatus(String ModCode, int Sid){
         
         try{
-        String query = "SELECT STATUS FROM APP.COMCOVERSHEETS WHERE MODULE_CODE = ? AND STUD_ID = ?";
+        String query = "SELECT STATUS, DUE_DATE FROM APP.COMCOVERSHEETS WHERE MODULE_CODE = ? AND STUD_ID = ?";
         PreparedStatement pt = con.prepareStatement(query);
         pt.setString(1, ModCode);
         pt.setInt(2, Sid);
 
         ResultSet rs  = pt.executeQuery();
         if (rs.next()) {
-            String s;
-            s = rs.getString("STATUS");
+            String[] s = new String[2];
+            
+            s[0] = rs.getString("STATUS");
+            s[1] = rs.getString("DUE_DATE");
+            
             return s;
-            //s[1] = rs.getString("MODULE_TITLE");
+            
             
             }
         }
