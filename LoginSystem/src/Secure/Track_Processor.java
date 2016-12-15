@@ -14,9 +14,9 @@ public class Track_Processor {
     Db_Repo DbPro = new Db_Repo();
    
     
-    public String getStatus(String ModCode, int Sid){
+    public String[] getStatus(String ModCode, int Sid){
        
-        String s = DbPro.CheckStatus(ModCode, Sid);
+        String[] s = status.CheckStatus(ModCode, Sid);
         return s;
         
     }
