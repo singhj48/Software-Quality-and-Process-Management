@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ecs.system;
+package Secure;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -129,7 +129,7 @@ public class Db_Repo {
     public String CheckStatus(String ModCode, int Sid){
         
         try{
-        String query = "SELECT STATUS FROM DANNY.COMCOVERSHEETS WHERE MODULE_CODE = ? AND STUD_ID = ?";
+        String query = "SELECT STATUS FROM APP.COMCOVERSHEETS WHERE MODULE_CODE = ? AND STUD_ID = ?";
         PreparedStatement pt = con.prepareStatement(query);
         pt.setString(1, ModCode);
         pt.setInt(2, Sid);

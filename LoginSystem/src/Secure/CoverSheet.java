@@ -5,7 +5,7 @@
  */
 
 
-package ecs.system;
+package Secure;
 
 /**
  *
@@ -22,7 +22,6 @@ public class CoverSheet {
     String[] s = new String[3];
 
 
-    
     public void CreateCoverSheet(String code, String Title){
         //Taking the information from the GUI and storing them in attributes of the object.
         //And adding call a db_repo method to add to the database  

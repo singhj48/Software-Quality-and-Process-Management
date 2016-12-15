@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ecs.system;
+package Secure;
 
-import java.awt.Color;
+
 
 /**
  *
@@ -16,7 +16,7 @@ public class ECS_Track extends javax.swing.JFrame {
     /**
      * Creates new form ECS_Track
      */
-    TrackMediator StatusMed = new TrackMediator();
+    //TrackMediator StatusMed = new TrackMediator();
     
     public ECS_Track() {
         initComponents();
@@ -133,10 +133,10 @@ public class ECS_Track extends javax.swing.JFrame {
        
        String ModCode = jTextField4.getText();
        int Sid = Integer.parseInt(jTextField5.getText());
-       String s = StatusMed.method(ModCode, Sid);
-       if (s == null)
-           s = "Not submitted";
-       jTextField6.setText(s);
+       //String s = StatusMed.method(ModCode, Sid);
+       //if (s == null)
+        //   s = "Not submitted";
+       //jTextField6.setText(s);
        
        
     }//GEN-LAST:event_jButton1ActionPerformed

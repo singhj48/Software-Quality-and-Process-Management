@@ -6,7 +6,7 @@
 
 //@@@@@@@@@@ This is where all the events will but sent out to all the processors that are need to complete the event@@@@@@@@@// 
 
-package Secure;
+package ecs.system;
 import javax.swing.JOptionPane;
 //import java.sql.*;
 

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ecs.system;
+package Secure;
 
 /**
  *
@@ -11,12 +11,11 @@ package ecs.system;
  */
 public class Track_Processor {
     
-    CoverSheet status = new CoverSheet();
+    Db_Repo DbPro = new Db_Repo();
     
     public String getStatus(String ModCode, int Sid){
        
-        String s = status.CheckStatus(ModCode, Sid);
-        // error
+        String s = DbPro.CheckStatus(ModCode, Sid);
         return s;
         
     }
