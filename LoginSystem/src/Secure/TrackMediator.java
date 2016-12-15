@@ -14,9 +14,7 @@ public class TrackMediator {
     Track_Processor trackP = new Track_Processor();
     
     public String method(String ModCode, int Sid){
-        //System.out.println(ModCode);
-        //System.out.println(Sid);
-        
+         
         String s = trackP.getStatus(ModCode, Sid);
         return s;
         
