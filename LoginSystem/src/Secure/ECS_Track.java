@@ -136,10 +136,31 @@ public class ECS_Track extends javax.swing.JFrame {
        
        String ModCode = jTextField4.getText();
        int Sid = Integer.parseInt(jTextField5.getText());
-       //String s = StatusMed.method(ModCode, Sid);
-       //if (s == null)
-        //   s = "Not submitted";
-       //jTextField6.setText(s);
+       String[] s = StatusMed.methodToGet(ModCode, Sid);
+       String s1 = s[0];
+       String s2 = s[1];
+       
+       try{
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            LocalDate localDate = LocalDate.parse(s2);
+            if(s1 != null){
+                jTextField6.setText(s1);
+            }
+            else
+            {
+                if(LocalDate.now().isAfter(localDate))
+            {
+                jTextField6.setText("Absence");
+            }
+            else{
+                jTextField6.setText("Awaiting submission");
+            }
+            }
+        }
+       catch (Exception e){
+           System.out.println("Cannot convert");
+       } 
+      
        
        
     }//GEN-LAST:event_jButton1ActionPerformed
