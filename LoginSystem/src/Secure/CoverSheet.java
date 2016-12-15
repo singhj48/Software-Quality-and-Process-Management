@@ -67,4 +67,8 @@ public class CoverSheet {
     public String GetStudName(){
         return StudName;
     }
+    public String[] CheckStatus(String ModCode, int Sid){
+        String[] s = DbPro.CheckStatus(ModCode, Sid);
+        return s;
+    }
 }
